@@ -1,0 +1,24 @@
+{
+	"name": "mini-vue",
+	"version": "1.0.0",
+	"description": "mini版本的vue",
+	"main": "index.js",
+	"scripts": {
+		"build:dev": "rollup -c",
+		"serve": "cross-env ENV=development rollup -c -w",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "vnues",
+	"license": "MIT",
+	"keywords": [
+		"vue"
+	],
+	"devDependencies": {
+		"@babel/core": "^7.11.1",
+		"@babel/preset-env": "^7.11.0",
+		"cross-env": "^7.0.2",
+		"rollup": "^2.26.3",
+		"rollup-plugin-babel": "^4.4.0",
+		"rollup-plugin-serve": "^1.0.3"
+	}
+}

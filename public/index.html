@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+
+	<body>
+		<div id="app">
+			<h1>mini-vue</h1>
+			<hello-vue> </hello-vue>
+			<my-component></my-component>
+			<p>{{name}}</p>
+		</div>
+		<script src="/dist/umd/vue.js"></script>
+		<script>
+			Vue.component("my-component", {
+				template: "<button>点我</button>",
+			});
+			const vm = new Vue({
+				el: "#app",
+				components: {
+					["hello-vue"]: {
+						data: {
+							name: "hello vue",
+						},
+						template: "<h2>{{name}}</h2>",
+					},
+					created() {
+						setTimeout(() => {
+							this.name = "hello world";
+							console.log(this.name);
+						}, 2000);
+					},
+				},
+				created() {
+					setTimeout(() => {
+						this.name = "我是落落落洛克";
+						console.log(this.name);
+					}, 2000);
+				},
+				data: {
+					name: "vnues",
+					arr: [1, 2, 3],
+				},
+				watch: {
+					name(newValue, oldValue) {
+						console.log(newValue, oldValue);
+					},
+				},
+			});
+		</script>
+	</body>
+</html>
