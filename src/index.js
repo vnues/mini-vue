@@ -3,6 +3,7 @@ import { renderMixin } from './render'
 import { lifecyleMixin } from './lifecycle'
 import { initGlobalAPI } from './global-api/index'
 import { stateMixin } from './state'
+import { eventsMixin } from './events'
 function Vue(options) {
     /**
      * 进行初始化
@@ -15,9 +16,10 @@ function Vue(options) {
  * 拆分多个流程到不同文件上
  */
 initMixin(Vue)
-renderMixin(Vue)
 stateMixin(Vue)
+eventsMixin(Vue)
 lifecyleMixin(Vue)
+renderMixin(Vue)
 initGlobalAPI(Vue)
 
 /**

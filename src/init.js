@@ -2,6 +2,7 @@ import { initState } from './state'
 import { mountComponent, callHook } from './lifecycle'
 import { compileToFunction } from './compiler/index'
 import { mergeOptions } from './util/index'
+import { initEvents } from './events'
 
 /**
  * 初始化混入原型上的方法
@@ -21,6 +22,7 @@ export default function initMixin(Vue) {
          * 初始化状态
          */
         initState(vm)
+        initEvents(vm)
         callHook(vm, 'created')
         /***
          * 挂载流程
