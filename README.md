@@ -1026,3 +1026,7 @@ export function nextTick(cb) {
 	timerFunc();
 }
 ```
+
+## 问题
+
+- 组件级的 diff 暂时还未进行配置
