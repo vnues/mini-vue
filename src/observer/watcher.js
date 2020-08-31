@@ -67,6 +67,9 @@ class Watcher {
         popTarget()
         return value
     }
+    /**
+     * 通常默认更新都是异步更新的
+     */
     update() {
         if (this.lazy) {
             this.dirty = true;
