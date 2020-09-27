@@ -6,7 +6,7 @@ const attribute = /^\s*([^\s"'<>\/=]+)(?:\s*(=)\s*(?:"([^"]*)"+|'([^']*)'+|([^\s
 const startTagClose = /^\s*(\/?)>/; // 匹配标签结束的 >  <div>
 const defaultTagRE = /\{\{((?:.|\r?\n)+?)\}\}/g
 
-
+// 测试11
 export function parseHTML10(html) {
     let root = null; // ast语法树的树根
     let currentParent; // 标识当前父亲是谁
