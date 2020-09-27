@@ -33,7 +33,6 @@ export function eventsMixin(Vue) {
         }
         return shouldPropagate;
     };
-
 }
 
 /**
