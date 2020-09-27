@@ -1,6 +1,6 @@
 /**
  * 什么是state:
- * 就是data+computed+watch等等
+ * 就是data+computed+watch等等1
  */
 
 import { observe } from "./observer/index";
