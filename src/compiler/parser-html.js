@@ -80,7 +80,7 @@ export function parseHTML10(html) {
         function advance(n) {
             html = html.substring(n);
         }
-        function parseStartTag() {
+        function parseStartTag1() {
             let start = html.match(startTagOpen);
             if (start) {
                 const match = {
